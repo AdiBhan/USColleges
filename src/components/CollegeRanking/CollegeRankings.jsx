@@ -1,31 +1,47 @@
+import LoadingData from "../LoadingData/LoadingData";
 import Tables from "../Tables/Tables";
 const CollegeRankings = (props) => {
   return (
     <div className={specialBackground}>
       <div class={gridStyle}>
         <div className={outlineStyle}>
-          <Tables
-            Colleges={props.Colleges}
-            data={props.forbesData}
-            color="red"
-            table_name="Forbes College Rankings"
-          />
+          {props.isPending ? (
+            <Tables
+              Colleges={props.Colleges}
+              data={props.forbesData}
+              color="red"
+              table_name="Forbes College Rankings"
+              link="https://www.forbes.com/top-colleges/"
+            />
+          ) : (
+            <LoadingData />
+          )}
         </div>
         <div className={outlineStyle}>
-          <Tables
-            Colleges={props.Colleges}
-            data={props.crData}
-            color="blue"
-            table_name="College Raptor Rankings"
-          />
+          {props.isPending ? (
+            <Tables
+              Colleges={props.Colleges}
+              data={props.crData}
+              color="blue"
+              table_name="College Raptor Rankings"
+              link="https://www.collegeraptor.com/college-rankings/"
+            />
+          ) : (
+            <LoadingData />
+          )}
         </div>
         <div className={outlineStyle}>
-          <Tables
-            Colleges={props.Colleges}
-            data={props.moneyData}
-            color="green"
-            table_name="Money College Rankings"
-          />
+          {props.isPending ? (
+            <Tables
+              Colleges={props.Colleges}
+              data={props.moneyData}
+              color="green"
+              table_name="Money College Rankings"
+              link="https://www.money.com/money/best-colleges"
+            />
+          ) : (
+            <LoadingData />
+          )}
         </div>
       </div>
     </div>

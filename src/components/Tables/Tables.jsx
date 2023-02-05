@@ -16,7 +16,11 @@ const Tables = (props) => {
   const table_style = `ui striped ${props.color} table`;
   return (
     <div className="border-2 border-black h ">
-      <h1 className="m-3 text-center scale-95 ui header">{props.table_name}</h1>
+      <a className="hover:text-blue-300" href={props.link}>
+        <h1 className="m-3 text-center scale-95 ui header hover:text-blue-600">
+          {props.table_name}
+        </h1>{" "}
+      </a>{" "}
       <div
         className=" table-container"
         style={{ height: "600px", overflowY: "scroll" }}

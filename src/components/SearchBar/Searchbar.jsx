@@ -152,6 +152,7 @@ const SearchBar = (props) => {
             moneyData={moneyData}
             forbesData={forbesData}
             crData={crData}
+            isPending={props.isPending}
           />
         </div>
       </div>

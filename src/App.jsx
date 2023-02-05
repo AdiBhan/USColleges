@@ -6,21 +6,25 @@ import Footers from "./components/Footer/Footer";
 import SearchBar from "./components/SearchBar/Searchbar";
 function App() {
   // Get data from Flask backend
+
   useEffect(() => {
     axios
       .get("https://flask-backend-6d0i.onrender.com/data/cr/")
       .then((response) => {
+        setIsPending(true);
         setCrData(response.data);
       });
 
     axios
       .get("https://flask-backend-6d0i.onrender.com/data/forbes/")
       .then((response) => {
+        setIsPending(true);
         setForbesData(response.data);
       });
     axios
       .get("https://flask-backend-6d0i.onrender.com/data/money/")
       .then((response) => {
+        setIsPending(true);
         setMoneyData(fixMoneyData(response.data));
       });
   }, []);
@@ -40,6 +44,7 @@ function App() {
   const [forbesData, setForbesData] = useState([]);
   const [moneyData, setMoneyData] = useState([]);
   const [crData, setCrData] = useState([]);
+  const [isPending, setIsPending] = useState(false);
 
   return (
     <BrowserRouter>
@@ -55,6 +60,7 @@ function App() {
                 forbesData={forbesData}
                 moneyData={moneyData}
                 crData={crData}
+                isPending={isPending}
               />
               <div className={background}>
                 <Footers background={background} />
