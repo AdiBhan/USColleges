@@ -1,4 +1,4 @@
-# USColleges 1.0.0 👩‍🎓
+# USColleges 1.0.2 👩‍🎓
 
 ## 📙 Description
 

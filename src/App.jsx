@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ComingSoon from "./components/ComingSoon/ComingSoon";
 import Footers from "./components/Footer/Footer";
-import SearchBar from "./components/SearchBar/Searchbar";
+import Header from "./components/Header/Header";
 function App() {
   // Get data from Flask backend
 
@@ -55,7 +55,7 @@ function App() {
               <ComingSoon />
             </Route>
             <Route path="/" exact>
-              <SearchBar
+              <Header
                 background={background}
                 forbesData={forbesData}
                 moneyData={moneyData}
