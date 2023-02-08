@@ -31,7 +31,7 @@ const Tables = (props) => {
               {" "}
               <th></th>
               <th>Ranking</th>
-              <th>Name</th>
+              <th> Name</th>
               <th>Location</th>
             </tr>
           </thead>

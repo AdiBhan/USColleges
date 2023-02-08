@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import "semantic-ui-css/semantic.min.css";
-import CollegeRankings from "../CollegeRanking/CollegeRankings";
+import TableLayout from "../Tables/TableLayout";
 import GraphButton from "./Buttons/GraphButton";
 import ResetButton from "./Buttons/ResetButton";
 import SearchButton from "./Buttons/SearchButton";
@@ -142,6 +142,9 @@ const Header = (props) => {
 
   return (
     <div className="bg-white">
+      <div class="ui segments bg-blue-400">
+        <div class="ui segment"></div>
+      </div>
       <div className={searchBarandProfilePos}>
         <div className={spacingStyle}>
           <div className>
@@ -199,7 +202,7 @@ const Header = (props) => {
           <div></div>
         )}
         <div className={props.background}>
-          <CollegeRankings
+          <TableLayout
             moneyData={moneyData}
             forbesData={forbesData}
             crData={crData}

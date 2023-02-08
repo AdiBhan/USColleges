@@ -1,6 +1,6 @@
 import LoadingData from "../LoadingData/LoadingData";
-import Tables from "../Tables/Tables";
-const CollegeRankings = (props) => {
+import Tables from "./Tables";
+const TableLayout = (props) => {
   return (
     <div className={specialBackground}>
       <div class={gridStyle}>
@@ -48,7 +48,7 @@ const CollegeRankings = (props) => {
   );
 };
 
-export default CollegeRankings;
+export default TableLayout;
 
 const outlineStyle =
   "scale-95 hover:scale-100 bg-white m-3 rounded-lg shadow-lg";

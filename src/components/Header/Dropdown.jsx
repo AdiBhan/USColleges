@@ -7,11 +7,7 @@ const Dropdown = (props) => {
         }}
         className="scale-90 ui secondary button dropdown "
       >
-        <option
-          id="College"
-          value="College"
-          className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
-        >
+        <option id="College" value="College">
           Search by College
         </option>
         <option id="Location" value="Location">
