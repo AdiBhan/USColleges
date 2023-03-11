@@ -1,0 +1,95 @@
+@import "_variables.scss";
+
+
+@mixin hover_effect($degree){
+    &:hover{
+     
+       rotate: $degree;
+       
+    }
+}
+
+.submit_button{
+    background-color: $submit_color;
+    box-shadow: 2px 1px 3px 0px $site_color;
+    border: 2px solid black;
+    font-family: $logo_font;
+    scale: .9;
+    color: $white;
+    font-family: $logo_font;
+    padding: .7rem;
+    border-radius: 20rem;
+    font-size: 1.2rem;
+    border-radius: 20%;
+    position: relative;
+    rotate: -.5deg;
+    right: 7.8rem;
+    animation: float-in_from_left 1s ease-in-out;
+}
+.submit_button:hover{
+    @include hover_effect(-2deg);
+}
+.reset_button:hover{
+    @include hover_effect(1deg);
+}
+.graph_button:hover{
+    @include hover_effect(2deg);
+}
+.reset_button{
+    background-color: $reset_color;
+    box-shadow: 2px 1px 3px 0px $site_color;
+    border: 2px solid black;
+    font-family: $logo_font;
+    scale: .9;
+    color: $white;
+    font-family: $logo_font;
+    padding: .7rem;
+    border-radius: 20rem;
+    font-size: 1.2rem;
+    border-radius: 20%;
+    position: relative;
+    rotate: -1deg;
+    right: 7.8rem;
+    margin: .7rem;
+    animation: fade-in .3s ease-in-out both;
+}
+.graph_button{
+    background-color: $graph_color;
+    box-shadow: 2px 1px 3px 0px $site_color;
+    border: 2px solid black;
+    font-family: $logo_font;
+    scale: .9;
+    color: $white;
+    font-family: $logo_font;
+    padding: .7rem;
+    border-radius: 20rem;
+    font-size: 1.2rem;
+    border-radius: 20%;
+    position: relative;
+    rotate: -1deg;
+    right: 7.8rem;
+    margin: .7rem;
+    animation: fade-in .3s ease-in-out;
+}
+
+.favorites_button{
+    background-color: rgb(221, 10, 10);
+    box-shadow: 2px 1px 3px 0px rgb(152, 99, 99);
+    border: 2px solid $black;
+    font-family: $logo_font;
+    scale: .9;
+    color: $white;
+    font-family: $logo_font;
+    padding: .7rem;
+    border-radius: 20rem;
+    font-size: 1.2rem;
+    border-radius: 20%;
+    position: relative;
+    rotate: -1deg;
+    left: 15rem;
+  
+    animation: float-in_from_left 1s ease-in-out;
+}
+.favorites_button:hover{
+    @include hover_effect(2deg);
+}

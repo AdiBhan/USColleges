@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@1,200&family=Merriweather+Sans:ital,wght@1,500&family=Questrial&display=swap");
+@keyframes float-in_from_left {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.submit_button {
+  background-color: #6215e7;
+  box-shadow: 2px 1px 3px 0px #696fd9;
+  border: 2px solid black;
+  font-family: "Genos", sans-serif;
+  scale: 0.9;
+  color: #fff;
+  font-family: "Genos", sans-serif;
+  padding: 0.7rem;
+  border-radius: 20rem;
+  font-size: 1.2rem;
+  border-radius: 20%;
+  position: relative;
+  rotate: -0.5deg;
+  right: 7.8rem;
+  animation: float-in_from_left 1s ease-in-out;
+}
+
+.submit_button:hover:hover {
+  rotate: -2deg;
+}
+
+.reset_button:hover:hover {
+  rotate: 1deg;
+}
+
+.graph_button:hover:hover {
+  rotate: 2deg;
+}
+
+.reset_button {
+  background-color: #3044ca;
+  box-shadow: 2px 1px 3px 0px #696fd9;
+  border: 2px solid black;
+  font-family: "Genos", sans-serif;
+  scale: 0.9;
+  color: #fff;
+  font-family: "Genos", sans-serif;
+  padding: 0.7rem;
+  border-radius: 20rem;
+  font-size: 1.2rem;
+  border-radius: 20%;
+  position: relative;
+  rotate: -1deg;
+  right: 7.8rem;
+  margin: 0.7rem;
+  animation: fade-in 0.3s ease-in-out both;
+}
+
+.graph_button {
+  background-color: #d27613;
+  box-shadow: 2px 1px 3px 0px #696fd9;
+  border: 2px solid black;
+  font-family: "Genos", sans-serif;
+  scale: 0.9;
+  color: #fff;
+  font-family: "Genos", sans-serif;
+  padding: 0.7rem;
+  border-radius: 20rem;
+  font-size: 1.2rem;
+  border-radius: 20%;
+  position: relative;
+  rotate: -1deg;
+  right: 7.8rem;
+  margin: 0.7rem;
+  animation: fade-in 0.3s ease-in-out;
+}
+
+/*# sourceMappingURL=Buttons.css.map */

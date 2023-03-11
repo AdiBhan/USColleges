@@ -1,11 +1,11 @@
 import React from "react";
-
+import "../../../styles/Header.scss";
 function ResetButton(props) {
   return (
     <div>
       {" "}
       {props.isReset ? (
-        <button className="ui primary button " onClick={props.resetData}>
+        <button className="reset_button" onClick={props.resetData}>
           Reset
         </button>
       ) : (

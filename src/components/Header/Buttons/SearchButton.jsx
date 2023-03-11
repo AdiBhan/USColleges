@@ -1,17 +1,11 @@
 import React from "react";
-
+import "../../../styles/Buttons.scss";
 function SearchButton(props) {
-  const submitStyle =
-    "m-3 border-2 border-black rounded-full hover:scale-90 ui positive button";
-
   return (
     <div>
       {" "}
-      <button
-        onClick={props.returnResults}
-        className={`md:flex ${submitStyle} scale-95 `}
-      >
-        Search
+      <button onClick={props.returnResults} className="submit_button">
+        Search<span className="material-symbols-outlined"></span>
       </button>
     </div>
   );

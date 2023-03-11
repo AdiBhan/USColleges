@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@1,200&family=Merriweather+Sans:ital,wght@1,500&family=Questrial&display=swap");
+@keyframes float-in_from_left {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.data_loader_sty {
+  scale: 1.5;
+  rotate: 1deg;
+  color: #696fd9;
+}
+
+.title_sty {
+  font-family: "Genos", sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding: 1rem;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 1px 1px 0.5px #000;
+  color: #000;
+  background-color: #fff;
+  position: relative;
+}
+
+.title_sty:hover {
+  text-shadow: 1px 2px 0.5px #696fd9;
+}
+
+.body_sty {
+  font-family: "Genos", sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 0.2px 0.2px 0.3px #000;
+  color: #000;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.header_sty {
+  font-family: "Genos", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 1px 1px 0.5px #000;
+  color: #000;
+  background-color: #fff;
+  position: relative;
+}
+
+.table_sty {
+  font-family: "Genos", sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 0.2px 0.2px 0.3px #000;
+  background-color: #fff;
+  color: #000;
+  margin: 1rem;
+  border-radius: 20%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #000;
+  position: relative;
+  bottom: 1rem;
+  animation: fade-in 0.2s ease-in-out;
+}
+
+/*# sourceMappingURL=DataStyle.css.map */

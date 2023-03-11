@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@1,200&family=Merriweather+Sans:ital,wght@1,500&family=Questrial&display=swap");
+@keyframes float-in_from_left {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.text_style {
+  font-family: "Genos", sans-serif;
+  font-size: 1.2rem;
+  color: #000;
+  background-color: #fff;
+  position: relative;
+  margin-left: 2.2rem;
+  animation: fade-in 2s ease-in-out;
+}
+
+.header_style {
+  font-family: "Genos", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #000;
+  background-color: #fff;
+  position: relative;
+  animation: fade-in 1s ease-in-out;
+}
+
+/*# sourceMappingURL=SearchResults.css.map */

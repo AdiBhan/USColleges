@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@1,200&family=Merriweather+Sans:ital,wght@1,500&family=Questrial&display=swap');
+
+
+$logo_font: 'Genos', sans-serif;
+$black: #000;
+$white: #fff;
+$site_color: #696fd9;
+$submit_color: #6215e7;
+$reset_color: #3044ca;
+$graph_color: #d27613;
+
+
+@keyframes float-in_from_left {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

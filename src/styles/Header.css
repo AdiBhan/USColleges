@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@1,200&family=Merriweather+Sans:ital,wght@1,500&family=Questrial&display=swap");
+@keyframes float-in_from_left {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.selection_box {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 2px 1px 3px 0px #696fd9;
+  color: #fff;
+  font-family: "Genos", sans-serif;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  right: 6.6rem;
+  animation: float-in_from_left 1s ease-in-out;
+}
+
+.searchbar_style {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0.1px 0.2px 0.2px 0.2px #696fd9;
+  border: 1px solid #000;
+  color: #000;
+  font-family: "Genos", sans-serif;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 20rem;
+  position: relative;
+  right: 7rem;
+  animation: float-in_from_left 1s ease-in-out;
+}
+
+.searchbar_style:hover {
+  background-color: #f4faff;
+  box-shadow: 1px 1px 1px 1px #696fd9;
+  border: 1px solid #000;
+}
+
+@media screen and (max-width: 768px) {
+  .selection_box {
+    font-size: 1rem;
+    padding: 0.5rem;
+    position: relative;
+    left: 5rem;
+    width: 5rem;
+  }
+}
+.searchBarandProfilePos {
+  display: flex;
+  margin-bottom: 0.25rem;
+  margin-top: 0.75rem;
+  justify-content: center;
+}
+
+.purple_line {
+  box-shadow: 2.5px 4px 1px 10px #696fd9;
+  width: 100%;
+  position: absolute;
+  top: 8rem;
+}
+
+.purple_line2 {
+  box-shadow: 2px 4px 1px 10px #696fd9;
+  width: 100%;
+  position: absolute;
+  bottom: 9rem;
+}
+
+.purple_line3 {
+  display: none;
+  box-shadow: 2.5px 4px 1px 10px #010550;
+  width: 100%;
+  position: absolute;
+  top: 15.2rem;
+}
+
+.search_icon {
+  position: absolute;
+  scale: 0.2;
+  left: 62.5rem;
+  top: 2rem;
+  color: #696fd9;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transform: rotate(180deg);
+  transform: rotate(360deg);
+  z-index: 50;
+
+  animation: 1s ease-in-out;
+}
+
+/*# sourceMappingURL=Header.css.map */

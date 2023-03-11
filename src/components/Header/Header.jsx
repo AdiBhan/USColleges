@@ -1,21 +1,26 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import "semantic-ui-css/semantic.min.css";
+import "../../styles/Header.scss";
 import TableLayout from "../Tables/TableLayout";
+import FavoritesButton from "./Buttons/FavoritesButton";
 import GraphButton from "./Buttons/GraphButton";
 import ResetButton from "./Buttons/ResetButton";
 import SearchButton from "./Buttons/SearchButton";
 import Dropdown from "./Dropdown";
 import Icon from "./Icon";
+import SearchIcon from "./SearchIcon";
 import SearchResults from "./SearchResults";
 const Header = (props) => {
   //---------------------------------------------------------
   // State variables
   const [search, setSearch] = useState("");
+
   const searchTextStyle = "m-1 text-sm italic text-center bg-white ui header  ";
 
   const [crData, setCrData] = useState(props.crData);
   const [forbesData, setForbesData] = useState(props.forbesData);
+
   const [moneyData, setMoneyData] = useState(props.moneyData);
 
   const [render, setRender] = useState(false);
@@ -52,6 +57,14 @@ const Header = (props) => {
 
   const returnResults = () => {
     setSearch(searchText);
+    const line2 = document.getElementsByClassName("purple_line")[0];
+    const search_icon = document.getElementsByClassName("search_icon")[0];
+
+    search_icon.style.display = "none";
+    line2.style.display = "none";
+
+    const line3 = document.getElementsByClassName("purple_line3")[0];
+    line3.style.display = "block";
 
     // Checks if user accidentally pressed enter without typing anything
 
@@ -132,6 +145,16 @@ const Header = (props) => {
   };
 
   const resetData = () => {
+    const line2 = document.getElementsByClassName("purple_line")[0];
+
+    const search_icon = document.getElementsByClassName("search_icon")[0];
+
+    search_icon.style.display = "block";
+    line2.style.display = "block";
+
+    const line3 = document.getElementsByClassName("purple_line3")[0];
+    line3.style.display = "none";
+
     setCrData(props.crData);
     setForbesData(props.forbesData);
     setMoneyData(props.moneyData);
@@ -142,55 +165,48 @@ const Header = (props) => {
 
   return (
     <div className="bg-white">
-      <div class="ui segments bg-blue-400">
-        <div class="ui segment"></div>
-      </div>
-      <div className={searchBarandProfilePos}>
+      <div className={`searchBarandProfilePos header_sty`}>
+        <span className="purple_line"></span>{" "}
+        <SearchIcon returnResults={returnResults} />
+        <span className="purple_line2"></span>
+        <span className="purple_line3"></span>
         <div className={spacingStyle}>
-          <div className>
-            <div className="flex grid-cols-1 scale-90 ">
-              <div>
-                {" "}
-                <h8 className="italic ui tiny header"></h8>
-              </div>
-            </div>{" "}
-          </div>{" "}
-          <div className="flex flex-row justify-between">
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <Icon />
-            </div>
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <Dropdown placeholder={handlePlaceHolder} />
-            </div>{" "}
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <div className="flex m-3 row">
-                <div className="flex justify-between scale-110">
-                  {" "}
-                  <input
-                    onChange={(e) => logChange(e)}
-                    className={searbarStyle}
-                    onKeyDown={handleKeyPress}
-                    value={searchText}
-                    placeholder={`Find ${placeholderValue} Rankings... `}
-                  ></input>
-                </div>
-              </div>{" "}
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <SearchButton returnResults={returnResults}></SearchButton>
-                <ResetButton
-                  isReset={isReset}
-                  resetData={resetData}
-                ></ResetButton>
-                <GraphButton
-                  isReset={isReset}
-                  placeholderValue={placeholderValue}
-                  resetData={resetData}
-                ></GraphButton>
-              </div>{" "}
+          <div className="flex grid-cols-1 scale-90 "></div>{" "}
+          <div>
+            {" "}
+            <h8 className="italic ui tiny header"></h8>
+          </div>
+        </div>{" "}
+        <Icon />
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Dropdown placeholder={handlePlaceHolder} />
+        </div>{" "}
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <div className="flex m-3 row">
+            <div className="flex justify-between scale-110">
+              {" "}
+              <input
+                onChange={(e) => logChange(e)}
+                className={`searchbar_style`}
+                onKeyDown={handleKeyPress}
+                value={searchText}
+                maxLength="25"
+                placeholder={`Find ${placeholderValue} Rankings... `}
+              ></input>
             </div>
           </div>{" "}
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <SearchButton returnResults={returnResults}></SearchButton>{" "}
+            <ResetButton isReset={isReset} resetData={resetData}></ResetButton>
+            <GraphButton
+              isReset={isReset}
+              placeholderValue={placeholderValue}
+              resetData={resetData}
+            ></GraphButton>
+          </div>{" "}
+          <FavoritesButton />
         </div>
-      </div>
+      </div>{" "}
       <div>
         {render ? (
           <SearchResults
@@ -201,26 +217,18 @@ const Header = (props) => {
         ) : (
           <div></div>
         )}
-        <div className={props.background}>
-          <TableLayout
-            moneyData={moneyData}
-            forbesData={forbesData}
-            crData={crData}
-            isPending={props.isPending}
-          />{" "}
-        </div>
+        <div></div>{" "}
       </div>{" "}
+      <TableLayout
+        moneyData={moneyData}
+        forbesData={forbesData}
+        crData={crData}
+        isPending={props.isPending}
+      />{" "}
     </div>
   );
 };
 
 export default Header;
 
-//-------------------------------------------------------------------------------------------------
-// CSS INLINE STYLING USING TAILWIND
-const searbarStyle =
-  "ring-1  bg-white ring-inset ring-offset-purple-100/50 border-2 border-black placeholder-black shadow-md s  scale-125  font-bold font-red-500  m-3 md:flex h-10  rounded-full  p-3  scale-105 hover:scale-130 font:mono ";
-const searchBarandProfilePos = "bg-white  flex  md:flex  justify-center";
-
-const spacingStyle = "flex justify-end gap-3";
-//-------------------------------------------------------------------------------------------------
+const spacingStyle = "flex justify-end gap-3 ";

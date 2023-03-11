@@ -1,0 +1,25 @@
+@import "_variables.scss";
+
+.text_style{
+    font-family: $logo_font;
+    font-size: 1.2rem;
+    color: $black;
+
+
+    background-color: $white;
+    position: relative;
+    margin-left: 2.2rem;
+    animation: fade-in 2s ease-in-out;
+   
+}
+.header_style{
+    font-family: $logo_font;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: $black;
+    background-color: $white;
+    position: relative;
+    animation: fade-in 1s ease-in-out;
+   
+}
+

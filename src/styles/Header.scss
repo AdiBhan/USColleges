@@ -1,0 +1,104 @@
+@import "_variables.scss";
+
+.selection_box{
+    background-color: rgb(0, 0, 0);
+    box-shadow: 2px 1px 3px 0px $site_color;
+    color: $white;
+    font-family: $logo_font;
+    padding: .8rem;
+    font-size: 1.2rem;
+    
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    right: 6.6rem;
+    animation: float-in_from_left 1s ease-in-out;
+   
+}
+
+.searchbar_style{
+    background-color: rgb(255, 255, 255);
+    box-shadow: .1px .2px .2px .2px $site_color;
+    border: 1px solid $black;
+    color: $black;
+    font-family: $logo_font;
+    padding: .8rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 20rem;
+    position: relative;
+    right: 7rem;
+    animation: float-in_from_left 1s ease-in-out;
+    
+}
+.searchbar_style:hover{
+    background-color: #f4faff;
+    
+    box-shadow: 1px 1px 1px 1px $site_color;
+    border: 1px solid $black;
+}
+
+
+@media screen and (max-width: 768px) {
+    .selection_box{
+        font-size: 1rem;
+        padding: .5rem;
+        position: relative;
+        left: 5rem;
+        width: 5rem;
+    }
+}
+    
+.searchBarandProfilePos{
+    display: flex; 
+margin-bottom: 0.25rem; 
+margin-top: 0.75rem; 
+justify-content: center; 
+
+
+}
+.purple_line{
+ 
+    box-shadow: 2.5px 4px 1px 10px $site_color;
+
+    width: 100%;
+    position: absolute;
+    top: 8rem;
+}
+
+.purple_line2{
+ 
+    box-shadow: 2px 4px 1px 10px $site_color;
+
+    width: 100%;
+    position: absolute;
+    bottom: 9rem;
+}
+.purple_line3{
+    display: none;
+ 
+    box-shadow: 2.5px 4px 1px 10px $site_color;
+
+    width: 100%;
+    position: absolute;
+    top: 15.2rem;
+}
+.search_icon{
+    position: absolute;
+    scale: .6;
+    left: 59.6rem;
+    top: 2.1rem;
+    color: $site_color;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transform: rotate(180deg);
+    transform: rotate(360deg);
+    z-index: 50;
+}
